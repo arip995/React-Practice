@@ -5,6 +5,7 @@ import Name from './Components/name';
 import Array from './Components/array';
 import Effect from './Components/effect';
 import Callfunction from './Components/callfunction';
+import CallApi from './Components/CallApi';
 function App() {
   useEffect(() => {
     // console.log('Hello')
@@ -15,7 +16,8 @@ function App() {
       {/* <Name /> */}
       {/* <Array /> */}
       {/* <Effect /> */}
-      <Callfunction />
+      {/* <Callfunction /> */}
+      <CallApi />
     </div>
   );
 }
