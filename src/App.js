@@ -19,7 +19,7 @@ function App() {
 			{/* <Effect /> */}
 			{/* <Callfunction /> */}
 			{/* <CallApi /> */}
-      <ComponentA />
+			<ComponentA />
 		</div>
 	);
 }
