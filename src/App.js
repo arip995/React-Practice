@@ -6,6 +6,7 @@ import Array from "./Components/array";
 import Effect from "./Components/effect";
 import Callfunction from "./Components/callfunction";
 import CallApi from "./Components/CallApi";
+import ComponentA from "./Components/ComponentA";
 function App() {
 	useEffect(() => {
 		// console.log('Hello')
@@ -17,7 +18,8 @@ function App() {
 			{/* <Array /> */}
 			{/* <Effect /> */}
 			{/* <Callfunction /> */}
-			<CallApi />
+			{/* <CallApi /> */}
+      <ComponentA />
 		</div>
 	);
 }
