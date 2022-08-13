@@ -13,7 +13,7 @@ const Counter = () => {
       <button onClick={() => setCount((prev) => prev+1)}>
         Count{count}
       </button>
-      <button onClick={incrementCountbyFive}>
+      <button onClick={() =>incrementCountbyFive()}>
         Count{count}
       </button>
     </div>
