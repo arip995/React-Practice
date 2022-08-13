@@ -20,7 +20,7 @@ const Effect = () => {
     // Aborts a DOM request before it has completed. This is able to abort fetch requests, consumption of any response bodies, and streams.
     //If we use asynchronous execution, the process doesnot stop even if we unmount the DOM, so when we unmount the DOM, we have to cancell all the web API used
     // return () => abortController.abort();//A cleanup function
-  }, []);
+  }, [effect]);
   //if we passs no argument as the second paramenter then the useeffect will be executed after every render
   //if we pass no argument as the second paramenter then the useeffect will only execute for the initial render
 
