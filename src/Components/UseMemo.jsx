@@ -3,9 +3,16 @@ import React, { useState, useMemo } from "react";
 const UseMemo = () => {
 	const [counterOne, setCounterOne] = useState(0);
 	const [counterTwo, setCounterTwo] = useState(0);
+    const [b, setB] = useState(true);
+	const updateCounterOne = (a) => {
+        if(a){
+            setCounterOne(counterOne + 1);
 
-	const updateCounterOne = () => {
-		setCounterOne(counterOne + 1);
+        }else{
+		setCounterOne(counterOne - 1);
+
+        }
+        setB(!b)
 	};
 
 	// const isCounterOneEven = () => {
@@ -15,6 +22,7 @@ const UseMemo = () => {
 	// }
 	//It caches the value of the function, it only recalculates it when the state in the second parameter changes
 	const isCounterOneEven = useMemo(() => {
+        console.log("Evaluated")
 		let i = 0;
 		while (i < 2000000000) i++;
 		return counterOne % 2 === 0;
@@ -26,7 +34,7 @@ const UseMemo = () => {
 
 	return (
 		<div>
-			<button onClick={updateCounterOne}>
+			<button onClick={()=>updateCounterOne(b)}>
 				{counterOne}
 				{isCounterOneEven ? "Even" : "Odd"}
 			</button>
