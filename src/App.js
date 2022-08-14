@@ -25,9 +25,9 @@ function App() {
 			{/* <CallApi /> */}
 			{/* <ComponentA /> */}
 			{/* <UseReducer /> */}
-			{/* <Parent /> */}
-			<UseMemo />
-			<Intervasl />
+			<Parent />
+			{/* <UseMemo />
+			<Intervasl /> */}
 		</div>
 	);
 }

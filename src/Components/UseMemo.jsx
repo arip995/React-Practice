@@ -47,3 +47,7 @@ export default UseMemo;
 
 //Usememo caches the result
 //used to cache the result of a function
+//The React useMemo Hook returns a memoized value.
+//The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running.
+
+

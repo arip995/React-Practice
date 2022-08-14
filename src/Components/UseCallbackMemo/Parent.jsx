@@ -10,7 +10,7 @@ const Parent = () => {
 
 	const incrementAge = useCallback(() => {
 		setAge((prev) => prev + 1);
-	}, [age]);
+	}, []);
 	//It caches the function, the function is only redefined if the state in the second parameter changes
 	const incrementSalary = useCallback(() => {
 		setSalary((prev) => prev + 10000);
