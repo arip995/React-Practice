@@ -7,17 +7,17 @@ const Intervasl = () => {
 	const [timer, setTimer] = useState(0);
 	useEffect(() => {
         inputRef.current = value;
-		// intervalRef.current = setInterval(() => {
-		// 	setTimer((prev) => prev + 1);
-		// }, 1000);
-		// return () => {
-		// 	clearInterval(intervalRef.current);
-		// };
+		intervalRef.current = setInterval(() => {
+			setTimer((prev) => prev + 1);
+		}, 1000);
+		return () => {
+			clearInterval(intervalRef.current);
+		};
 	}, [value]);
 	return (
 		<div>
 			Timer - {timer}
-			<button onClick={() => {inputRef.current.focus();console.log(inputRef.current);clearInterval(intervalRef.current);}}>Stop</button>
+			<button onClick={() => {clearInterval(intervalRef.current);inputRef.current.focus();console.log(inputRef.current);}}>Stop</button>
             <input value={value} ref = {inputRef} onChange={(e) => setValue(e.target.value)}type="text"/>
             <h2> Value: {inputRef.current}</h2>
 		</div>
