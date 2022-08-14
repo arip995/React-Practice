@@ -10,6 +10,7 @@ import ComponentA from "./Components/ComponentA";
 import UseReducer from "./Components/useReducer";
 import Parent from "./Components/UseCallbackMemo/Parent";
 import UseMemo from "./Components/UseMemo";
+import Intervasl from "./Components/Intervasl";
 function App() {
 	useEffect(() => {
 		// console.log('Hello')
@@ -23,9 +24,10 @@ function App() {
 			{/* <Callfunction /> */}
 			{/* <CallApi /> */}
 			{/* <ComponentA /> */}
-      {/* <UseReducer /> */}
-	  {/* <Parent /> */}
-	  <UseMemo />
+			{/* <UseReducer /> */}
+			{/* <Parent /> */}
+			{/* <UseMemo /> */}
+			<Intervasl />
 		</div>
 	);
 }
