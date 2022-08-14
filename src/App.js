@@ -26,8 +26,8 @@ function App() {
 			{/* <ComponentA /> */}
 			{/* <UseReducer /> */}
 			<Parent />
-			{/* <UseMemo />
-			<Intervasl /> */}
+			<UseMemo />
+			{/* <Intervasl /> */}
 		</div>
 	);
 }
