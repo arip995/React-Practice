@@ -8,6 +8,8 @@ import Callfunction from "./Components/callfunction";
 import CallApi from "./Components/CallApi";
 import ComponentA from "./Components/ComponentA";
 import UseReducer from "./Components/useReducer";
+import Parent from "./Components/UseCallbackMemo/Parent";
+import UseMemo from "./Components/UseMemo";
 function App() {
 	useEffect(() => {
 		// console.log('Hello')
@@ -21,7 +23,9 @@ function App() {
 			{/* <Callfunction /> */}
 			{/* <CallApi /> */}
 			{/* <ComponentA /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+	  {/* <Parent /> */}
+	  <UseMemo />
 		</div>
 	);
 }
