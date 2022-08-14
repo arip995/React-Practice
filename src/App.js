@@ -7,6 +7,7 @@ import Effect from "./Components/effect";
 import Callfunction from "./Components/callfunction";
 import CallApi from "./Components/CallApi";
 import ComponentA from "./Components/ComponentA";
+import UseReducer from "./Components/useReducer";
 function App() {
 	useEffect(() => {
 		// console.log('Hello')
@@ -19,7 +20,8 @@ function App() {
 			{/* <Effect /> */}
 			{/* <Callfunction /> */}
 			{/* <CallApi /> */}
-			<ComponentA />
+			{/* <ComponentA /> */}
+      <UseReducer />
 		</div>
 	);
 }
