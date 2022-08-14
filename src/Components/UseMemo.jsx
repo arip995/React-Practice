@@ -13,12 +13,12 @@ const UseMemo = () => {
 	//     while(i <2000000000) i++;
 	//     return counterOne%2 ===0
 	// }
-
+	//It caches the value of the function, it only recalculates it when the state in the second parameter changes
 	const isCounterOneEven = useMemo(() => {
 		let i = 0;
 		while (i < 2000000000) i++;
 		return counterOne % 2 === 0;
-	},[counterOne]);
+	}, [counterOne]);
 
 	const updateCounterTwo = () => {
 		setCounterTwo(counterTwo + 1);
