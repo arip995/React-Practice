@@ -95,3 +95,34 @@ export default UseMemo;
 //The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running.
 
 
+
+//Code for debouncing
+// let timer;
+// const processChanges = (callback) => {
+// 	clearTimeout(timer);
+// 	timer = setTimeout(() => { callback()}, 300);
+// };
+
+// let debounceTimer;
+// const debounce = (callback, time) => {
+//   clearTimeout(debounceTimer);
+//   debounceTimer = setTimeout(callback, time);
+// }
+
+
+//Code for throttling
+// let throttleTimer;
+// const throttle = (callback, time) => {
+//   if (throttleTimer) return;
+//     throttleTimer = true;
+//     setTimeout(() => {
+//         callback();
+//         throttleTimer = false;
+//     }, time);
+// }
+ 
+// window.addEventListener("scroll", () => { 
+//   throttle(handleScrollAnimation, 250);
+// });
+
+
