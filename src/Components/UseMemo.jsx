@@ -1,47 +1,45 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from 'react';
 
 const UseMemo = () => {
-	const [counterOne, setCounterOne] = useState(0);
-	const [counterTwo, setCounterTwo] = useState(0);
-    const [b, setB] = useState(true);
-	const updateCounterOne = (a) => {
-        if(a){
-            setCounterOne(counterOne + 1);
+  const [counterOne, setCounterOne] = useState(0);
+  const [counterTwo, setCounterTwo] = useState(0);
+  const [b, setB] = useState(true);
+  const updateCounterOne = (a) => {
+    if (a) {
+      setCounterOne(counterOne + 1);
+    } else {
+      setCounterOne(counterOne - 1);
+    }
+    setB(!b);
+  };
 
-        }else{
-		setCounterOne(counterOne - 1);
+  // const isCounterOneEven = () => {
+  //     let i=0;
+  //     while(i <2000000000) i++;
+  //     return counterOne%2 ===0
+  // }
+  //It caches the value of the function, it only recalculates it when the state in the second parameter changes
+  const isCounterOneEven = useMemo(() => {
+    //function is executed every time the state counterOne changes and it just returns the memoized value on its call
+    console.log('Evaluated');
+    let i = 0;
+    while (i < 2000000000) i++;
+    return counterOne % 2 === 0;
+  }, [counterOne]);
 
-        }
-        setB(!b)
-	};
+  const updateCounterTwo = () => {
+    setCounterTwo(counterTwo + 1);
+  };
 
-	// const isCounterOneEven = () => {
-	//     let i=0;
-	//     while(i <2000000000) i++;
-	//     return counterOne%2 ===0
-	// }
-	//It caches the value of the function, it only recalculates it when the state in the second parameter changes
-	const isCounterOneEven = useMemo(() => {
-        //function is executed every time the state counterOne changes and it just returns the memoized value on its call
-        console.log("Evaluated")
-		let i = 0;
-		while (i < 2000000000) i++;
-		return counterOne % 2 === 0;
-	}, [counterOne]);
-
-	const updateCounterTwo = () => {
-		setCounterTwo(counterTwo + 1);
-	};
-
-	return (
-		<div>
-			<button onClick={()=>updateCounterOne(b)}>
-				{counterOne}
-				{isCounterOneEven ? "Even" : "Odd"}
-			</button>
-			<button onClick={updateCounterTwo}>{counterTwo}</button>
-		</div>
-	);
+  return (
+    <div>
+      <button onClick={() => updateCounterOne(b)}>
+        {counterOne}
+        {isCounterOneEven ? 'Even' : 'Odd'}
+      </button>
+      <button onClick={updateCounterTwo}>{counterTwo}</button>
+    </div>
+  );
 };
 
 export default UseMemo;
@@ -94,8 +92,6 @@ export default UseMemo;
 //The React useMemo Hook returns a memoized value.
 //The useMemo Hook can be used to keep expensive, resource intensive functions from needlessly running.
 
-
-
 //Code for debouncing
 // let timer;
 // const processChanges = (callback) => {
@@ -109,7 +105,6 @@ export default UseMemo;
 //   debounceTimer = setTimeout(callback, time);
 // }
 
-
 //Code for throttling
 // let throttleTimer;
 // const throttle = (callback, time) => {
@@ -120,9 +115,7 @@ export default UseMemo;
 //         throttleTimer = false;
 //     }, time);
 // }
- 
-// window.addEventListener("scroll", () => { 
+
+// window.addEventListener("scroll", () => {
 //   throttle(handleScrollAnimation, 250);
 // });
-
-
